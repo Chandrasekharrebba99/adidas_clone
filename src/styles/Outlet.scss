@@ -3,6 +3,7 @@
     justify-content: center;
     padding-top: 25px;
     width: 100%;
+   
 
     h1{
         font-size: 35px;
@@ -22,7 +23,7 @@
         .imageCard-cont{
            background-color: rgb(255, 255, 255);
            height: 190px;
-
+           cursor: pointer;
            overflow: hidden;
            transition: transform 0.2s ease-in-out;
            
@@ -62,7 +63,8 @@
 .filter-btn{
     background-color: aliceblue !important;
 
-  
+  display: flex;
+  align-items: center;
     padding-right: 20px;
     padding-left: 20px;
     padding: 10px;
@@ -178,9 +180,18 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 100px;
+   
 }
 
-
+.cross-icon-cont{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    .cross-btn{
+        cursor: pointer;
+    }
+}
 .Drawer-content{
     display: flex;
     justify-content: center;
@@ -207,4 +218,28 @@
         
 
     }
+}
+
+.outlet-home-nav{
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    span{
+        font-size: large;
+        color: black;
+        margin: 2px;
+    }
+    .back{
+        font-weight: 600;
+    }
+    .home{
+        text-decoration: underline;
+    }
+}
+
+
+.dropdown-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

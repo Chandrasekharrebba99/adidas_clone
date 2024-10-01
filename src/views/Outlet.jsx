@@ -1,31 +1,40 @@
 // src/pages/Home.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import Outletnav from '../components/Outletnav';
 import SaleOffer from '../components/SaleOffer';
 import SignupOffer from '../components/SignupOffer';
 import FilterDrawer from '../components/filter';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchProducts } from '../redux/slices/productslice';
 import {useEffect} from 'react'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { fetchProducts,addToCart } from '../redux/slices/productSlice';
+
 
 
 const Outlet = () => {
   const dispatch = useDispatch();
-  const { items, status, error } = useSelector((state) => state.products);
+  const { items, cart, error } = useSelector((state) => state.products);
+  const [addItem,setAddItem] = useState({})
 
   useEffect(() => {
-    if (status === 'idle') {
+   
       dispatch(fetchProducts()); // Dispatch the thunk to fetch products
-    }
-    console.log(items,"Items")
-  }, [dispatch, status]);
-
+    
+     console.log(cart)
+  }, [dispatch]);
+ 
+  const handleAddItem = (product) => {
+    // setAddItem(item)
+    dispatch(addToCart(product));
+    console.log("item added",product)
+  }
   
   return <div>
     <SaleOffer/>
     <div>
       <div className='FilterContent'>
+        
         <FilterDrawer/>
       </div>
       <hr/>
@@ -45,7 +54,11 @@ const Outlet = () => {
               <span className='item-cat'>{item.category}</span>
               <p>{item.title.slice(0,10)}</p>
               <p>{Math.floor(Math.random()*10)+1} colors</p>
-              <button className='addToCartBtn'>Add to Cart</button>
+            
+                <button className='addToCartBtn dropdown-cont ' onClick={(e)=>handleAddItem(item)} >Add to Cart  &nbsp; <ArrowForwardIcon/></button>
+              
+             
+              
               {/* <p>{item.rating.rate}people:<span>{item.rating.count}</span></p> */}
               </div>
         

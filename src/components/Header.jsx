@@ -5,6 +5,10 @@ import "../styles/Header.scss"; // Correct
  // Import the SCSS styles
 //  import { IconUser } from '@tabler/icons-react';
 //  import { IconHeart } from '@tabler/icons-react';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import LocalMallIcon from '@mui/icons-material/LocalMall';
+import SearchIcon from '@mui/icons-material/Search';
 const Header = () => {
   return (
     <header className="header">
@@ -38,11 +42,19 @@ const Header = () => {
         <div className='search-container'>
 
         <div className="user-actions">
-            <input type="text" placeholder="Search" className="search-bar" />
-            <button className="search-button">🔍</button>
+          <div className='serch-cont'>
+          <input type="text" placeholder="Search" className="search-bar" />
+          <SearchIcon/>
+          </div>
+           
+            <button className="search-button"><PersonOutlineIcon/></button>
+            <button className="search-button"><FavoriteBorderIcon/></button>
+            <Link to="/cart"> <button className="search-button"><LocalMallIcon/></button>
+            </Link>
+           
             {/* <div className="profile"><IconUser stroke={2} /></div> */}
             {/* <div className="wishlist"><IconHeart stroke={2} /></div> */}
-            <div className="cart">🛒</div>
+            <div className="cart"></div>
           </div>
         </div>
       </div>

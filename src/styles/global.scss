@@ -1,0 +1,41 @@
+.footer-main {
+    background-color: #1f1f1f; /* Dark background */
+    padding: 20px;
+    color: #fff; /* White text */
+    text-align: center;
+    
+    .footer-links {
+        margin-bottom: 10px;
+
+        .row-elements {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* For responsiveness */
+
+            .list-item-footer {
+                margin: 0 15px; /* Space between each list item */
+                font-size: 14px;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: #cccccc; /* Light grey for links */
+                cursor: pointer;
+                transition: color 0.3s ease; /* Smooth color transition */
+
+                &:hover {
+                    color: #ffffff; /* White on hover */
+                }
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 12px;
+        color: #aaaaaa; /* Lighter grey for the copyright text */
+
+        p {
+            margin: 0; /* Remove margin */
+        }
+    }
+}

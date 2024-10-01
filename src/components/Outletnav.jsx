@@ -1,12 +1,13 @@
-
+import TurnLeftIcon from '@mui/icons-material/TurnLeft';
 const Outletnav = ()=>{
     return(
         <div>
-            <div>
-                <span>Back</span>
-                <span>Home</span>
+            <div className='outlet-home-nav'>
+                <TurnLeftIcon/>
+                <span className='back'>Back</span>
+                <span className='home'>Home</span>
                 <span>/</span>
-                <span>Outlet</span>
+                <span className='outlet'>Outlet</span>
             </div>
         </div>
     )

@@ -4,7 +4,9 @@ import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import TuneIcon from '@mui/icons-material/Tune';
 
+import CloseIcon from '@mui/icons-material/Close';
 const FilterDrawer = () => {
   const [open, setOpen] = useState(false);
 
@@ -19,7 +21,7 @@ const FilterDrawer = () => {
     <div>
       {/* Button to open the drawer */}
       <button className='filter-btn' onClick={toggleDrawer(true)}>
-        FILTER & SORT
+        FILTER & SORT <TuneIcon/>
       </button>
 
       {/* Right-side drawer */}
@@ -33,9 +35,18 @@ const FilterDrawer = () => {
           sx={{ width: 450 }} // Width of the drawer
           role="presentation"
         >
-          <Button onClick={toggleDrawer(false)} variant="contained">
-            Close
-          </Button>
+          
+          
+          <div className='cross-icon-cont'>
+          <div>
+          <h3>Filter & Sort </h3>
+          </div>
+
+          <CloseIcon onClick={toggleDrawer(false)} className='cross-btn'/>
+
+          </div>
+         
+          
 
           <div>
             <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>

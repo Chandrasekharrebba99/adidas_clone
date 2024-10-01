@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Button from '@mui/material/Button';
 import { useEffect, useState } from 'react';
-
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 export default function SignupOffer() {
   const [state, setState] = React.useState({
     top: false,
@@ -41,6 +41,7 @@ export default function SignupOffer() {
                 Members get more! Like a 15% discount voucher, early access to the sale and access to limited edition products. Sign up now!
                 </p>
               <p className='hover-p-tag'>LEARN MORE</p>
+              
             </div>
 
             <div>
@@ -93,7 +94,11 @@ export default function SignupOffer() {
     <div>
       {/* <Button >Open Menu</Button> */}
       <div onClick={toggleDrawer(true)} className='topdropbox'>
+        <div className='dropdown-cont'>
         <p>{text}</p>
+        <KeyboardArrowDownIcon/>
+        </div>
+
       </div>
       <SwipeableDrawer
         anchor="top"

@@ -15,11 +15,47 @@ const productSlice = createSlice({
   name: 'products',
   initialState: {
     items: [],
+    cart: [], 
     status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
     error: null,
   },
   reducers: {
     // Optional: You can define synchronous actions here
+     // Add a product to the cart
+     addToCart: (state, action) => {
+      const product = action.payload;
+      const existingProduct = state.cart.find(item => item.id === product.id);
+      
+      if (existingProduct) {
+        // If the product already exists in the cart, increase the quantity
+        existingProduct.quantity += 1;
+      } else {
+        // If it's a new product, add it to the cart
+        state.cart.push({ ...product, quantity: 1 });
+      }
+    },
+    
+    // Remove a product from the cart
+    removeFromCart: (state, action) => {
+      const productId = action.payload;
+      // console.log(productId)
+      state.cart = state.cart.filter(item => item.id !== productId.id);
+    },
+    
+    // Update the quantity of a product in the cart
+    updateCartQuantity: (state, action) => {
+      const { id, quantity } = action.payload;
+      const existingProduct = state.cart.find(item => item.id === id);
+      
+      if (existingProduct) {
+        existingProduct.quantity = quantity;
+      }
+    },
+    
+    // Clear the entire cart
+    clearCart: (state) => {
+      state.cart = [];
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -36,5 +72,6 @@ const productSlice = createSlice({
       });
   },
 });
+export const { addToCart, removeFromCart, updateCartQuantity, clearCart } = productSlice.actions;
 
 export default productSlice.reducer;

@@ -35,7 +35,7 @@ const SaleOffer = ()=>{
 
                 <Outletnav/>
                 <div>
-                    <h1>Shoes, Clothing & Accessories Sale: Up to 60% <br/>Off<span>[4603]</span></h1>
+                    <h1>Shoes, Clothing & Accessories Sale: Up to 60% &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>Off<span>[4603]</span></h1>
                 </div>
                 <div className="Sale-categories">
                     {brandCategories.map((item)=>{

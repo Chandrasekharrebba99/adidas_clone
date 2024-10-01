@@ -81,12 +81,31 @@
         flex-direction: row;
         margin-left: 20px;
   
-        .search-bar {
+        
+        .serch-cont {
+          display: flex;
+          align-items: center;
           padding: 5px;
-          border: none;
-          border-radius: 4px;
+          background-color: #e8e8e8;
+          border: 2px solid transparent; // No border by default
+          border-radius: 4px; // Optional: Add border-radius to the container
+          margin-bottom: 10px;
+          &:hover, 
+          &:focus-within { // Apply border on hover and when the input is focused
+            border: 2px solid #000000;
+          }
         }
-  
+        
+        .search-bar {
+          padding: 2px;
+          border: none;
+          background-color: transparent;
+          outline: none; // Remove the default focus outline
+          width: 100%;
+          border-radius: 0px;
+          
+        }
+        
         .search-button {
           margin-left: 5px;
           background: none;

@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Outlet from './views/Outlet';
 import'./index.css'
 import SignupOffer from './components/SignupOffer';
+import Cart from './views/Cart';
+import Footer from './components/Footer';
 
 // import Outlet from './pages/Outlet';
 const App = () => {
@@ -15,9 +17,10 @@ const App = () => {
 
       <Routes>
         <Route path="/outlet" element={<Outlet />} />
-        {/* <Route path="/outlet" element={<Outlet />} /> */}
+        <Route path="/cart" element={<Cart />} />
       
       </Routes>
+      <Footer/>
     </Router>
   );
 };
