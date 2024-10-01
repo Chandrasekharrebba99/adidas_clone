@@ -179,3 +179,32 @@
     justify-content: flex-end;
     margin-right: 100px;
 }
+
+
+.Drawer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    .Drawer-content-collection{
+        display: flex;
+        .maint-p-tag{
+            font-size: 15px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+      
+        .hover-p-tag {
+            font-size: 11px;
+            font-weight: 700;
+            text-decoration: underline;
+            display: inline-block; /* Ensure background applies only to text width */
+            &:hover {
+                background-color: black;
+                color: #ffffff;
+            }
+        }
+        
+
+    }
+}

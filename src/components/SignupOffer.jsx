@@ -23,12 +23,52 @@ export default function SignupOffer() {
 
   const drawerContent = () => (
     <Box
-      sx={{ height: 200 }} // Adjust height if needed
+      sx={{ height: 450 }} // Adjust height if needed
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
-      {/* Plain area, no content here */}
+      <div className='Drawer-content'>
+        <div>
+          
+        </div>
+        <div className='Drawer-content-collection'>
+            <div>
+                <p className='maint-p-tag'>
+                SIGN UP & GET 15% OFF
+                </p>
+                <p>
+                Members get more! Like a 15% discount voucher, early access to the sale and access to limited edition products. Sign up now!
+                </p>
+              <p className='hover-p-tag'>LEARN MORE</p>
+            </div>
+
+            <div>
+                <p className='maint-p-tag'>
+                FREE DELIVERY, RETURN & EXCHANGE
+                </p>
+                <p>
+                Spend over Rs1000/- and your delivery is FREE!
+                For all orders, Return & Exchange is offered for free.
+                Delivery times for Delhi, Gurgaon: 1-2 Days, Metro Cities: 2-3 Days Others: 3-5 Days.              </p>
+              <div className='d-inline'>
+              <p className='hover-p-tag'>READ MORE ON DELIVERY</p><br/>
+              <p className='hover-p-tag'>READ MORE ON RETURN</p><br/>
+              <p className='hover-p-tag'>READ MORE ON EXCHANGE</p>
+              </div>
+             
+            </div>
+            <div>
+                <p className='maint-p-tag'>
+                EXTRA 5% OFF ON PREPAID ORDERS
+                </p>
+                <p>
+                Save 5% Extra on prepaid payments for all orders under Rs 5000/-
+                Easy Payments from UPI, Credit Card, and Net-banking</p>
+              
+            </div>
+        </div>
+      </div>
     </Box>
   );
   const [text, setText] = React.useState('Hello'); // Initial text
