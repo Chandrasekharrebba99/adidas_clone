@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const FilterDrawer = ()=> {
-
+const FilterDrawer = () => {
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (isOpen) => (event) => {
@@ -17,29 +18,171 @@ const FilterDrawer = ()=> {
   return (
     <div>
       {/* Button to open the drawer */}
-
-      <button className='filter-btn'   onClick={toggleDrawer(true)}>
-      FILTER & SORT
+      <button className='filter-btn' onClick={toggleDrawer(true)}>
+        FILTER & SORT
       </button>
 
       {/* Right-side drawer */}
       <Drawer
         anchor="right" // Drawer slides from the right
         open={open} // Drawer is open if `open` state is true
-        onClose={toggleDrawer(false)} // Closes the drawer when clicking outside
+        onClose={toggleDrawer(false)} // Close the drawer if user clicks outside
       >
-        {/* Empty box inside the drawer */}
+        {/* Content inside the drawer */}
         <Box
           sx={{ width: 450 }} // Width of the drawer
           role="presentation"
-          onClick={toggleDrawer(false)} // Closes the drawer when clicking inside
-          onKeyDown={toggleDrawer(false)} // Closes the drawer when using keyboard navigation
         >
-          {/* Empty content */}
+          <Button onClick={toggleDrawer(false)} variant="contained">
+            Close
+          </Button>
+
+          <div>
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>Sort by</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0 }}>
+                <Typography>You can return any item within 30 days of purchase.</Typography>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>FEARUTES</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0 }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }} >
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>MEMBERS EXCLUSIVE-EXTRA 15% OFF</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0 }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>DIVISION</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0 }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>PRODUCT TYPE</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0  }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>SIZE</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0  }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+
+
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>COLOUR</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0  }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+
+
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>DISCOUNT</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0  }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>GENDER</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0  }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>SPORTS</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0  }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>BRAND</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0  }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>TEAM</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0  }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+
+
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>COLLECTIONS</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0  }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>SUSTAINABILITY</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0  }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion sx={{ boxShadow: 'none', marginBottom: 0 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>PRICE</Typography>
+              </AccordionSummary>
+              <AccordionDetails sx={{ margin: 0  }}>
+                <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
+              </AccordionDetails>
+            </Accordion>
+            {/* Add more Accordion items if needed */}
+          </div>
+          <div>
+            <Button>
+              APPLY
+            </Button>
+          </div>
         </Box>
       </Drawer>
     </div>
   );
-}
+};
 
-export default FilterDrawer
+export default FilterDrawer;
