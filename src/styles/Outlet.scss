@@ -70,3 +70,18 @@
     font-weight: 800;
     margin: 10px;
 }
+.all-products-maincont{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    justify-content: center;
+    .item-img-container{
+        background-color: rgb(199, 199, 199);
+        width: 200px;
+        .itemimg{
+            height: 200px;
+            width: 200px;
+        }
+    }
+}
+
