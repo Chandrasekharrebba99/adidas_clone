@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #cacaca solid 1px;
+    // background-color: #783d3d;
+    color: #080808;
+    width: 100vw;
+    font-weight: 800;
+    height: 100px;
+    font-family: Roboto;
+    padding-bottom: 10px;
+  
+    .nav-help {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        // background-color: #000000;
+        margin: 0px;
+      .help-container {
+        .row-elements {
+          display: flex;
+          justify-content: right;
+          padding-right: 20px;
+          gap: 10px;
+  
+          .list-item-help {
+            font-size: 12px;
+            font-weight: 400;
+            color: #000000;
+            transition: text-decoration 0.2s ease;
+  
+            &:hover {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  
+    .nav-main-cont {
+      display: flex; // Ensure main container is a flex container
+      justify-content: space-between; // Adjust items' spacing
+      align-items: center;
+      width: 100%; // Ensure full width
+      margin: 0px;
+    //   background-color: #007bff;
+
+  
+      .logo img {
+        width: 70px; // Adjust as needed
+        padding: 0px;
+        margin: 0px;
+      }
+  
+      .menu {
+        .categories {
+          display: flex;
+          gap: 20px;
+  
+          a {
+            color: #0b0a0a;
+            text-decoration: none;
+            transition: color 0.2s ease; // Add a transition for hover
+  
+            &:hover {
+              color: #007bff; // Change color on hover
+            }
+          }
+        }
+      }
+  
+      .user-actions {
+        display: flex;
+        flex-direction: row;
+        margin-left: 20px;
+  
+        .search-bar {
+          padding: 5px;
+          border: none;
+          border-radius: 4px;
+        }
+  
+        .search-button {
+          margin-left: 5px;
+          background: none;
+          border: none;
+          color: #1e1e1e;
+          cursor: pointer;
+        }
+  
+        div {
+          margin-left: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  
+    // Media Query for Responsive Design
+    @media (max-width: 768px) {
+      .nav-main-cont {
+        flex-direction: column; // Stack items vertically on smaller screens
+        align-items: flex-start; // Align items to the start
+      }
+      
+      .menu {
+        .categories {
+          flex-direction: column; // Stack categories vertically
+        }
+      }
+  
+      .user-actions {
+        margin-left: 0; // Remove margin on smaller screens
+      }
+    }
+  }
+  
