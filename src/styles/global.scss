@@ -39,3 +39,27 @@
         }
     }
 }
+
+
+.navbar {
+    // position: relative;
+    // width: 100%;
+    // top: 0;
+    // left: 0;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+    
+    &.fade-down {
+      transform: translateY(40px);
+      opacity: 1;
+    }
+  }
+  
+.nav-light{
+    font-weight: 300;
+}
+
+.order-summary{
+    padding: 20px;
+}

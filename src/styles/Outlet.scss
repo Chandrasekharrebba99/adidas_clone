@@ -16,7 +16,12 @@
     }
     .Sale-categories{
         display: flex;
+        flex-wrap: wrap;
         gap: 10px;
+        @media (max-width: 768px) {
+            height: 500px;
+         
+        }
     
         // background-color: rgb(37, 150, 190);
         height: 100px;
@@ -56,7 +61,7 @@
     // position: absolute;
     z-index: -2;
     background-color: rgb(37, 150, 190);
-    height: 150px;
+    height: 110px;
     width: 100%;
 }
 
@@ -88,7 +93,7 @@
         .item-img-container {
             position: relative; /* Allow for proper positioning of inner elements */
             background-color: rgb(255, 255, 255);
-            width: 250px;
+            width: 280px;
             transition: transform 0.3s ease, border 0.3s ease; /* Smooth transition */
             border: 1px solid transparent; /* Default border is transparent */
             overflow: hidden; /* Prevent content overflow */
@@ -100,6 +105,10 @@
                 border: 1px solid rgb(53, 53, 53); /* Add black border on hover */
                 z-index: 10; /* Bring forward to prevent overlap issues */
             }
+            @media (max-width:750px) {
+                width: 150px;
+                // height: 200px;
+            }
             .addToCartBtn{
                 padding: 10px 20px;
                 background-color: rgb(0, 0, 0);
@@ -108,6 +117,7 @@
                 cursor: pointer;
                 font-size: 15px;
                 font-weight: 600;
+                margin: 10px;
                 transition: background-color 0.3s ease;
                 &:hover {
                     background-color: rgb(230, 230, 230);
@@ -116,9 +126,13 @@
             }
         
             .itemimg {
-                height: 250px;
-                width: 250px;
-                transition: none; /* No scaling for the image */
+                height: 280px;
+                width: 280px;
+                transition: none;
+                @media (max-width:750px) {
+                    width: 150px;
+                    height: 150px;
+                } /* No scaling for the image */
             }
         
             .product-content {
@@ -199,6 +213,7 @@
     padding: 80px;
     .Drawer-content-collection{
         display: flex;
+        // flex-wrap: wrap;
         .maint-p-tag{
             font-size: 15px;
             font-weight: 700;
@@ -220,14 +235,28 @@
     }
 }
 
+@media (max-width: 768px) {
+    .Drawer-content-collection{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
 .outlet-home-nav{
     display: flex;
     // justify-content: center;
+    
     align-items: center;
     span{
         font-size: large;
         color: black;
         margin: 2px;
+        &:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
     }
     .back{
         font-weight: 600;

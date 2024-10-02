@@ -1,5 +1,5 @@
 import TurnLeftIcon from '@mui/icons-material/TurnLeft';
-const Outletnav = ()=>{
+const OutletNav = ()=>{
     return(
         <div>
             <div className='outlet-home-nav'>
@@ -13,4 +13,4 @@ const Outletnav = ()=>{
     )
 }
 
-export default Outletnav
+export default OutletNav

@@ -1,21 +1,43 @@
 // src/App.jsx
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route,Navigate  } from 'react-router-dom';
+import Header from './layouts/Header';
 import Outlet from './views/Outlet';
 import'./index.css'
-import SignupOffer from './components/SignupOffer';
+import SignupOffer from './components/TopOffersDrawer';
 import Cart from './views/Cart';
-import Footer from './components/Footer';
+import Footer from './layouts/Footer';
 
 // import Outlet from './pages/Outlet';
 const App = () => {
+
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('fade-down');
+      } else {
+        navbar.classList.remove('fade-down');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <Router>
-      <SignupOffer/>
-      <Header />
+      <div className='navbar'>  
+         <SignupOffer/>
+          <Header />
+      </div>
+   
 
       <Routes>
+        <Route path="/" element={<Navigate to="/outlet" />} />
         <Route path="/outlet" element={<Outlet />} />
         <Route path="/cart" element={<Cart />} />
       

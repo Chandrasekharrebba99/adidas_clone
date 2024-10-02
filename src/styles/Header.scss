@@ -62,7 +62,13 @@
       .menu {
         .categories {
           display: flex;
-          gap: 20px;
+          gap:20px;
+          
+          @media (max-width:750px) {
+            gap: 15px;
+            font-size: xx-small;
+          }
+         
   
           a {
             color: #0b0a0a;
@@ -70,7 +76,8 @@
             transition: color 0.2s ease; // Add a transition for hover
   
             &:hover {
-              color: #007bff; // Change color on hover
+              color: #007bff;
+              text-decoration: underline; // Change color on hover
             }
           }
         }
@@ -120,23 +127,68 @@
         }
       }
     }
-  
+  .user-actions-mobile{
+    display: none;
+  }
     // Media Query for Responsive Design
-    @media (max-width: 768px) {
-      .nav-main-cont {
-        flex-direction: column; // Stack items vertically on smaller screens
-        align-items: flex-start; // Align items to the start
-      }
-      
-      .menu {
-        .categories {
-          flex-direction: column; // Stack categories vertically
+   
+  }
+  .search-cart-container{
+    margin-right: 20px;
+  }
+.cart-mobile{
+  display: none;
+}
+
+  @media (max-width: 768px) {
+    .user-actions-mobile{
+      display: none;
+    }.d-none1{
+      display: none !important;
+    }
+    .cart-mobile{
+      display: block;
+      margin-left:250px ;
+    }
+    .user-actions{
+      // display: none;
+      .serch-cont{
+        // display: none;
+        .search-bar{
+          // display: none!important;
         }
       }
-  
-      .user-actions {
-        margin-left: 0; // Remove margin on smaller screens
+      .d-none{
+        display: none;
+      }
+      .serch-icon{
+        display: none;
+      }
+      div{
+        display: none;
       }
     }
+    .nav-main-cont {
+      // flex-direction: column; // Stack items vertically on smaller screens
+      align-items: flex-start; // Align items to the start
+    }
+    .search-bar{
+      width: 10px;
+      display:none;
+    }
+    .serch-cont{
+      display: none;
+    }
+    
+    .menu {
+      .categories {
+        font-size: small;
+        margin-left: 10px;
+        // flex-direction: column; // Stack categories vertically
+      }
+    }
+    .user-actions-mobile{
+      display: inline;
+    }
+   
   }
-  

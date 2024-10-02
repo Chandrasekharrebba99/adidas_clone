@@ -32,7 +32,7 @@ const FilterDrawer = () => {
       >
         {/* Content inside the drawer */}
         <Box
-          sx={{ width: 450 }} // Width of the drawer
+          sx={{ width: 400 }} // Width of the drawer
           role="presentation"
         >
           

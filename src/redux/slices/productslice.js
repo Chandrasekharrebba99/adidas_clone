@@ -7,7 +7,7 @@ export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async () => {
     const response = await axios.get('https://fakestoreapi.com/products/');
-    return response.data;  // Automatically dispatches fulfilled or rejected actions
+    return response.data; 
   }
 );
 // https://dummyjson.com/products
@@ -58,13 +58,13 @@ const productSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder
+    builder 
       .addCase(fetchProducts.pending, (state) => {
         state.status = 'loading';
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.items = action.payload; // Set fetched data to state
+        state.items = action.payload.reverse(); // Set fetched data to state
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = 'failed';

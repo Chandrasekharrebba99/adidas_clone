@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addToCart,removeFromCart } from '../redux/slices/productSlice';
 import '../styles/Cart.scss';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { Link } from 'react-router-dom';
 const Cart = ()=>{
     const dispatch = useDispatch();
     const { cart} = useSelector((state) => state.products);
@@ -15,10 +16,12 @@ const Cart = ()=>{
                     <h1 className='p-bag-empty'>YOUR BAG IS EMPTY</h1>
                     <p>Once you add something to your bag - it will appear here. Ready to get started?</p>
 
-                    <div className='Checkout-cont'>
+                    <Link to="/outlet"> <div className='Checkout-cont'>
                     <h1>GET STARTED </h1>
                     <ArrowRightAltIcon/>
                     </div>
+                    </Link>
+                   
                     </div>
                 <div>
                 </div>
@@ -61,7 +64,7 @@ const Cart = ()=>{
             {/* <button onClick={() => dispatch(applyCoupon('DISCOUNT_CODE'))}>Apply Coupon</button> */}
 
             </div>
-            <div>
+            <div className='order-summary'>
                 <div className='Checkout-cont'>
                    <h1>CHECKOUT </h1>
                    <ArrowRightAltIcon/>

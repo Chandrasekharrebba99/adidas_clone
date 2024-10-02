@@ -1,4 +1,4 @@
-import Outletnav from "./Outletnav"
+import OutletNav from "./OutletNav"
 
 import '../styles/Outlet.scss'
 const brandCategories = [
@@ -14,7 +14,7 @@ const brandCategories = [
     }, {
         id:3,
         name:"KIDS",
-        imgUrl:"https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/em_in_men_outlet_iwp_d_e9fc2f3a8c.jpg"
+        imgUrl:"https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/em_in_kids_outlet_iwp_d_38afffa36c.jpg"
     }, {
         id:4,
         name:"SLIDES",
@@ -26,14 +26,14 @@ const brandCategories = [
         imgUrl:"https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/em_in_summer_wear_iwp_tile_d_04c921dbf0.jpg"
     },
 ]
-const SaleOffer = ()=>{
+const SaleCategories = ()=>{
     return(
-        <div>
+        <div className=""> 
             <div className="main-sale-catergories">
                 <div>
 
 
-                <Outletnav/>
+                <OutletNav/>
                 <div>
                     <h1>Shoes, Clothing & Accessories Sale: Up to 60% &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>Off<span>[4603]</span></h1>
                 </div>
@@ -58,4 +58,4 @@ const SaleOffer = ()=>{
     )
 }
 
-export default SaleOffer
+export default SaleCategories

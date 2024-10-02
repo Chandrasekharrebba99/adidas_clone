@@ -1,8 +1,8 @@
 // src/pages/Home.jsx
 import React, { useState } from 'react';
-import Outletnav from '../components/Outletnav';
-import SaleOffer from '../components/SaleOffer';
-import SignupOffer from '../components/SignupOffer';
+import Outletnav from '../components/OutletNav';
+import SaleCategories  from '../components/SaleCategories';
+import SignupOffer from '../components/TopOffersDrawer';
 import FilterDrawer from '../components/filter';
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -20,7 +20,7 @@ const Outlet = () => {
   useEffect(() => {
    
       dispatch(fetchProducts()); // Dispatch the thunk to fetch products
-    
+     
      console.log(cart)
   }, [dispatch]);
  
@@ -29,9 +29,9 @@ const Outlet = () => {
     dispatch(addToCart(product));
     console.log("item added",product)
   }
-  
+
   return <div>
-    <SaleOffer/>
+    <SaleCategories/>
     <div>
       <div className='FilterContent'>
         
@@ -42,7 +42,7 @@ const Outlet = () => {
       <div className='all-products-maincont'>
         {items.map((item)=>{
           return(
-            <div className='item-img-container'>
+            <div className='item-img-container' key={item.id}>
               <img src={item.image} className='itemimg'/>
               <div className='product-content'>
               <p className='price-red'>${item.price}</p>
@@ -51,7 +51,7 @@ const Outlet = () => {
               <span>: -30%  Original price</span>
               </div>
               <br/>
-              <span className='item-cat'>{item.category}</span>
+              <span className='item-cat'>{item.category.toUpperCase()}</span>
               <p>{item.title.slice(0,10)}</p>
               <p>{Math.floor(Math.random()*10)+1} colors</p>
             
