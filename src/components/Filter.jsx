@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import TuneIcon from '@mui/icons-material/Tune';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 import CloseIcon from '@mui/icons-material/Close';
 const FilterDrawer = () => {
@@ -21,7 +22,7 @@ const FilterDrawer = () => {
     <div>
       {/* Button to open the drawer */}
       <button className='filter-btn' onClick={toggleDrawer(true)}>
-        FILTER & SORT <TuneIcon/>
+        FILTER&nbsp; &&nbsp; SORT &nbsp; <TuneIcon/>
       </button>
 
       {/* Right-side drawer */}
@@ -32,7 +33,7 @@ const FilterDrawer = () => {
       >
         {/* Content inside the drawer */}
         <Box
-          sx={{ width: 400 }} // Width of the drawer
+          sx={{ width: 350 }} // Width of the drawer
           role="presentation"
         >
           
@@ -185,11 +186,10 @@ const FilterDrawer = () => {
             </Accordion>
             {/* Add more Accordion items if needed */}
           </div>
-          <div>
-            <Button>
-              APPLY
-            </Button>
-          </div>
+          <div className='Checkout-cont'>
+                   <h1>APPLY </h1>
+                   <ArrowRightAltIcon/>
+                </div>
         </Box>
       </Drawer>
     </div>

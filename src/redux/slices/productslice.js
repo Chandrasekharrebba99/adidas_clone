@@ -42,15 +42,7 @@ const productSlice = createSlice({
       state.cart = state.cart.filter(item => item.id !== productId.id);
     },
     
-    // Update the quantity of a product in the cart
-    updateCartQuantity: (state, action) => {
-      const { id, quantity } = action.payload;
-      const existingProduct = state.cart.find(item => item.id === id);
-      
-      if (existingProduct) {
-        existingProduct.quantity = quantity;
-      }
-    },
+    
     
     // Clear the entire cart
     clearCart: (state) => {
@@ -72,6 +64,6 @@ const productSlice = createSlice({
       });
   },
 });
-export const { addToCart, removeFromCart, updateCartQuantity, clearCart } = productSlice.actions;
+export const { addToCart, removeFromCart, clearCart } = productSlice.actions;
 
 export default productSlice.reducer;

@@ -1,9 +1,11 @@
 .footer-main {
-    background-color: #1f1f1f; /* Dark background */
+    background-color: #3b3b3b; /* Dark background */
     padding: 20px;
     color: #fff; /* White text */
     text-align: center;
-    
+    font-weight: 600;
+    width: 100vw;
+    margin-top: 30px;
     .footer-links {
         margin-bottom: 10px;
 
@@ -60,6 +62,9 @@
     font-weight: 300;
 }
 
-.order-summary{
-    padding: 20px;
+.filter-btn{
+    &:hover{
+        cursor: pointer;
+        opacity: 5;
+    }
 }

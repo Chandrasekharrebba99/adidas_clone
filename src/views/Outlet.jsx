@@ -8,7 +8,8 @@ import FilterDrawer from '../components/filter';
 import { useSelector, useDispatch } from 'react-redux';
 import {useEffect} from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { fetchProducts,addToCart } from '../redux/slices/productSlice';
+import { fetchProducts,addToCart } from '../redux/slices/productslice';
+// import { fetchProducts,addToCart } from '../redux/slices/productSlice';
 
 
 

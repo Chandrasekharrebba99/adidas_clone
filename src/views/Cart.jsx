@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart,removeFromCart } from '../redux/slices/productSlice';
+import { addToCart,removeFromCart } from '../redux/slices/productslice';
 import '../styles/Cart.scss';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Link } from 'react-router-dom';
