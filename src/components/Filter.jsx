@@ -184,7 +184,7 @@ const FilterDrawer = () => {
                 <Typography>You can track your order using the tracking link provided in your confirmation email.</Typography>
               </AccordionDetails>
             </Accordion>
-            {/* Add more Accordion items if needed */}
+           
           </div>
           <div className='Checkout-cont'>
                    <h1>APPLY </h1>

@@ -38,7 +38,7 @@ const Cart = ()=>{
             <h1>YOUR BAG</h1>
             <p>TOTAL ({cart.length} item) <strong>${cartTotal}</strong></p>
             <p>Items in your bag are not reserved — check out now to make them yours.</p>
-            {cart.map((item, index) => (
+            {cart?.map((item, index) => (
                 <div key={index} className='cart-item'>
                     
                     <img src={item.image} className='cart-item-img' alt={item.title} />
@@ -51,7 +51,7 @@ const Cart = ()=>{
                   
                 </div>
             ))}
-            <h2>Total: ${cart.reduce((acc, item) => acc + item.price, 0)}</h2>
+            <h2>Total: ${cart?.reduce((acc, item) => acc + item.price, 0)}</h2>
             <div className='Checkout-cont'>
                    <h1>CHECKOUT </h1>
                    <ArrowRightAltIcon/>

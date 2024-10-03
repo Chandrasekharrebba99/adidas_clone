@@ -3,7 +3,7 @@ const OutletNav = ()=>{
     return(
         <div>
             <div className='outlet-home-nav'>
-                <TurnLeftIcon/>
+                <TurnLeftIcon/> 
                 <span className='back'>Back</span>
                 <span className='home'>Home</span>
                 <span>/</span>

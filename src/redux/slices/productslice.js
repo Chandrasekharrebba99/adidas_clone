@@ -1,8 +1,7 @@
-// src/redux/slices/productSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// Async thunk to fetch products
+
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async () => {
@@ -20,17 +19,16 @@ const productSlice = createSlice({
     error: null,
   },
   reducers: {
-    // Optional: You can define synchronous actions here
-     // Add a product to the cart
+    
      addToCart: (state, action) => {
       const product = action.payload;
       const existingProduct = state.cart.find(item => item.id === product.id);
       
       if (existingProduct) {
-        // If the product already exists in the cart, increase the quantity
+     
         existingProduct.quantity += 1;
       } else {
-        // If it's a new product, add it to the cart
+
         state.cart.push({ ...product, quantity: 1 });
       }
     },
@@ -44,7 +42,7 @@ const productSlice = createSlice({
     
     
     
-    // Clear the entire cart
+
     clearCart: (state) => {
       state.cart = [];
     },
