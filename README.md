@@ -40,7 +40,6 @@ Currently, two official plugins are available:
 - "Add to Cart" button available for both mobile and desktop versions.
 - Header and footer designed to match the original website layout.
 - Utilized React hooks (useState, useEffect) and Redux features (useSelector, dispatch, provider, reducers, actions, and action creators) for managing cart and product API states.
-  ![image](https://github.com/user-attachments/assets/1a2b7e4e-12d4-4a3c-a330-643471df5c02)
 
 
 
