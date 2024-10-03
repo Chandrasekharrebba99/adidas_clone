@@ -12,12 +12,12 @@ Currently, two official plugins are available:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/Chandrasekharrebba99/adidas_clone.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd your-repo-name
+   cd adidas_clone
    ```
 
 3. Install dependencies:
@@ -29,3 +29,14 @@ Currently, two official plugins are available:
    ```bash
    npm start
    ```
+## Features
+- Feature 1
+- Feature 2
+- Feature 3
+
+
+## Technologies Used
+- React
+- Redux
+- React Router
+- Axios
