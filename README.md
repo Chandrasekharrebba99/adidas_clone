@@ -30,13 +30,29 @@ Currently, two official plugins are available:
    npm start
    ```
 ## Features
-- Feature 1
-- Feature 2
-- Feature 3
+- Multi-page components with routes applied for /outlet and /cart.
+- Responsive UI optimized for mobile, tablet, and desktop views.
+- Browser compatibility for Chrome, Brave, Mozilla Firefox, and Safari.
+- Product data fetched from a 3rd party API: Fake Store API.
+- Used Redux Thunk to fetch dummy product data.
+- Implemented hover and transition animations for a smoother user experience.
+- Dynamically generated product categories, clickable links for the Home page, and menu.
+- "Add to Cart" button available for both mobile and desktop versions.
+- Header and footer designed to match the original website layout.
+- Utilized React hooks (useState, useEffect) and Redux features (useSelector, dispatch, provider, reducers, actions, and action creators) for managing cart and product API states.
+  ![image](https://github.com/user-attachments/assets/1a2b7e4e-12d4-4a3c-a330-643471df5c02)
+
 
 
 ## Technologies Used
-- React
-- Redux
-- React Router
+- Vite + React
+- Vite config
+- React Router Dom
 - Axios
+- Redux
+- Redux Toolkit
+- SCSS
+- Material UI, MUI icons
+- HTML, CSS, JSX
+- ESLINT
+- Firebase for deploying
