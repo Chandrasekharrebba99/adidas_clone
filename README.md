@@ -27,7 +27,7 @@ Currently, two official plugins are available:
 
 4. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 ## Features
 - Multi-page components with routes applied for /outlet and /cart.
