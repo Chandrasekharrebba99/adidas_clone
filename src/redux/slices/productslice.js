@@ -51,10 +51,11 @@ const productSlice = createSlice({
     builder 
       .addCase(fetchProducts.pending, (state) => {
         state.status = 'loading';
+        state.error = null;
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.items = action.payload.reverse(); // Set fetched data to state
+        state.items = [...action.payload].reverse();
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = 'failed';
