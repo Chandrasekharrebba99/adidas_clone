@@ -39,15 +39,22 @@ const Cart = ()=>{
             <h1>YOUR BAG</h1>
             <p>TOTAL ({itemCount} {itemLabel}) <strong>${cartTotal}</strong></p>
             <p>Items in your bag are not reserved — check out now to make them yours.</p>
-            {cart?.map((item, index) => (
-                <div key={index} className='cart-item'>
+            {cart.map((item) => (
+                <div key={item.id} className='cart-item'>
                     
                     <img src={item.image} className='cart-item-img' alt={item.title} />
                     <div> 
                          <h3>{item.title}</h3>
                          <p>{item.description.slice(0,15)}</p>
                     <p>{item.price}</p>
-                    <button onClick={() => dispatch(removeFromCart(item))} className='btnCart'>REMOVE</button>
+                    <button
+                        type='button'
+                        aria-label={`Remove ${item.title} from your bag`}
+                        onClick={() => dispatch(removeFromCart(item))}
+                        className='btnCart'
+                    >
+                        REMOVE
+                    </button>
                         </div>
                   
                 </div>
