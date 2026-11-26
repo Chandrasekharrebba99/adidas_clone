@@ -7,8 +7,9 @@ const Cart = ()=>{
     const dispatch = useDispatch();
     const { cart} = useSelector((state) => state.products);
 
-    console.log(cart,"cart ascas")
-    const cartTotal = cart?.reduce((acc, item) => acc + item.price * item.quantity, 0) || 0;
+    const cartTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+    const itemCount = cart.reduce((count, item) => count + item.quantity, 0);
+    const itemLabel = itemCount === 1 ? 'item' : 'items';
     if(cart.length ==0){
         return(
             <div className='empty-cart'>
@@ -36,7 +37,7 @@ const Cart = ()=>{
 
            
             <h1>YOUR BAG</h1>
-            <p>TOTAL ({cart.length} item) <strong>${cartTotal}</strong></p>
+            <p>TOTAL ({itemCount} {itemLabel}) <strong>${cartTotal}</strong></p>
             <p>Items in your bag are not reserved — check out now to make them yours.</p>
             {cart?.map((item, index) => (
                 <div key={index} className='cart-item'>
@@ -51,7 +52,7 @@ const Cart = ()=>{
                   
                 </div>
             ))}
-            <h2>Total: ${cart?.reduce((acc, item) => acc + item.price, 0)}</h2>
+            <h2>Total: ${cartTotal}</h2>
             <div className='Checkout-cont'>
                    <h1>CHECKOUT </h1>
                    <ArrowRightAltIcon/>
@@ -71,7 +72,7 @@ const Cart = ()=>{
                 </div>
                 <h3>ORDER SUMMARY</h3>
                 <div className='cart-item-summery'>
-                    <p>{cart.length} item</p>
+                    <p>{itemCount} {itemLabel}</p>
                     <p>${cartTotal}</p>
                 </div>
                 <div className='cart-item-summery'>
