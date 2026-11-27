@@ -1,4 +1,4 @@
-import OutletNav from "./OutletNav"
+import OutletNav from "./Outletnav"
 
 import '../styles/Outlet.scss'
 const brandCategories = [

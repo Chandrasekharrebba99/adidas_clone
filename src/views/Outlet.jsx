@@ -1,9 +1,8 @@
 // src/pages/Home.jsx
 import React, { useState } from 'react';
-import Outletnav from '../components/OutletNav';
 import SaleCategories  from '../components/SaleCategories';
 import SignupOffer from '../components/TopOffersDrawer';
-import FilterDrawer from '../components/filter';
+import FilterDrawer from '../components/Filter';
 
 import { useSelector, useDispatch } from 'react-redux';
 import {useEffect} from 'react'
